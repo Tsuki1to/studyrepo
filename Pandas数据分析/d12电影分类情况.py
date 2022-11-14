@@ -31,7 +31,7 @@ Genre_list = list(set(Movie_Genre_list))
 #建立一个全部为0的数组，行索引为电影的编号，列索引为所有电影的分类
 #电影具有的分类，所在分类的列数据就会变为1
 Zreos_list = pd.DataFrame(np.zeros((df.shape[0],len(Genre_list))),columns=Genre_list)
-# print(Zreos_list)
+print(Zreos_list)
 
 # print(Movie_Genre_res_temp)
 for i in range(df.shape[0]):
@@ -48,10 +48,10 @@ Zero_count = Zreos_list.sum(axis=0)
 Genre_Total = Zero_count.sort_values()
 # print(Genre_Total)
 # print(type(Genre_Total))
-_x = Genre_Total.index
-_y = Genre_Total.values
-#画图
-plt.figure(figsize=(20,8),dpi=80)
-plt.bar(range(len(_x)),_y)
-plt.xticks(range(len(_x)),_x)
-plt.show()
+# _x = Genre_Total.index
+# _y = Genre_Total.values
+# #画图
+# plt.figure(figsize=(20,8),dpi=80)
+# plt.bar(range(len(_x)),_y)
+# plt.xticks(range(len(_x)),_x)
+# plt.show()
